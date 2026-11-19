@@ -18,7 +18,7 @@ An expense is { id, date: "YYYY-MM-DD", category, amount, note }.
 ## Setup and commands
 Requires Node 18 or newer (verified on Node 22). The project has no build step and no lint or type check yet.
 Safe commands (read-only or local to this folder):
-- npm install (uses package-lock.json)
+- npm ci (uses package-lock.json), then mkdir -p data once (the tool does not create data/ yet, known issue F3)
 - npm test (runs vitest once)
 - npm start -- list | total | month YYYY-MM (read data only)
 - node src/cli.js add | remove ... (changes the data file; use EXPENSE_FILE=/tmp/test.json when experimenting)
